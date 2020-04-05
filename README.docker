@@ -1,0 +1,32 @@
+# Build the docker image
+
+`docker build . -t ldsc_test`
+
+# Download data
+
+Place any required data on the data directory
+
+# Run the image
+
+`docker run -v "${PWD}/data":/ldsc/data -ti ldsc_test bash`
+
+# Using tutorial data
+
+1. Download the PGC data for BIP and SCZ:
+
+https://www.med.unc.edu/pgc/results-and-downloads/cd/
+
+Datasets to select:
+- Bipolar disorder subset
+- Schizophrenia subset
+
+2. Store the downloaded files in the data directory
+
+`docker run -v "${PWD}/data":/ldsc/data -ti ldsc_test bash`
+
+3. Execute the following commands inside the container
+
+```
+  conda activate ldsc
+  bash ./sample_test.sh
+```
