@@ -8,6 +8,6 @@ dependencies:
 - pybedtools=0.7
 - pip
 - pip:
-  - scipy==0.18
-  - pandas==0.20
-  - numpy==1.12
+  - scipy==1.2.3
+  - pandas==0.24.2
+  - numpy==1.16.6
