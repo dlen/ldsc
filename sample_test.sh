@@ -74,7 +74,7 @@ ldsc() {
   echo "###########################################"
   # LD Score Regression
   ./ldsc.py \
-    --rg $data_base/scz.sumstats.gz,$data_base/bip.sumstats.gz \
+    --rg scz.sumstats.gz,bip.sumstats.gz \
     --ref-ld-chr $data_base/eur_w_ld_chr/ \
     --w-ld-chr $data_base/eur_w_ld_chr/ \
     --out scz_bip
@@ -83,6 +83,6 @@ ldsc() {
 
 data_download
 untar_data
-munge_data $data_base/pgc.cross.SC* 17115 scz $data_base/w_hm3.snplist
-munge_data $data_base/pgc.cross.BIP* 11810 bip $data_base/w_hm3.snplist
+munge_data pgc.cross.SC* 17115 scz $data_base/w_hm3.snplist
+munge_data pgc.cross.BIP* 11810 bip $data_base/w_hm3.snplist
 ldsc
